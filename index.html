@@ -18,14 +18,15 @@
         <!-- INICIO MOBILE MENU -->
         <nav-header class="nav-list-mobile esconder-left">
             <div class="nav-list-header">
-                <h2>Feminino</h2>
+                <h2 class="product-mark">Feminino</h2>
                 <h2>Masculino</h2>
             </div>
             <ul class="">
-                <li> <a href="#"> Início   </a> </li>
-                <li> <a href="#"> Sobre    </a> </li>
-                <li> <a href="#"> Projetos </a> </li>
-                <li> <a href="#"> Contatos </a> </li>
+                <li> <a href="#"> Acessórios   </a> <button> <i class="bi bi-arrow-right"></i> </button> </li>
+                <li> <a href="#"> Roupas    </a>    <button> <i class="bi bi-arrow-right"></i> </button> </li>
+                <li> <a href="#"> Calças </a>       <button> <i class="bi bi-arrow-right"></i> </button> </li>
+                <li> <a href="#"> Sapatos </a>      <button> <i class="bi bi-arrow-right"></i> </button> </li>
+                <li> <a href="#"> Marcas </a>       <button> <i class="bi bi-arrow-right"></i> </button> </li>
             </ul>
             <div class="nav-footer">
                 <section>
@@ -62,7 +63,11 @@
         
         /** menu Drawer Products */
         .btn-mobile-left{
-                display: flex;
+            display: flex;
+        }
+        .product-mark{
+            padding: 10px;
+            background-color: bisque;
         }
         .nav-list-mobile{
             position: absolute;
@@ -71,6 +76,7 @@
             width: 36vw;
             height: 100vh;
             background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             
             display: flex;
             flex-direction: column;
@@ -81,22 +87,39 @@
             padding: 5px 10px;
         }
         .nav-list-header h2{
-            font-size: 16px;
+            padding: 10px;
+            letter-spacing: 1.2px;
+            font-size: 14px;
+        }
+        .nav-list-mobile li a{
+            margin-left: 20px;
+            color: #000;
         }
         .nav-list-mobile li{
-            margin-left: 20px;
             padding: 10px 0;
+            display: flex;
+            padding-right: 20px;
+            justify-content: space-between;
+        }
+        .nav-list-mobile li:hover{
+            background-color: bisque;
         }
         .nav-footer{
             color: #fff;
             font-size: 12px;
+            width: 35vw;
             background-color: #1f1f1f;
+
+            position: fixed;
+            bottom: 0;
         }
         .nav-footer section{
             padding-left: 20px;
         }
+        
         .nav-footer section h2{
             padding: 10px 0;
+            cursor: pointer;
         }
         .nav-footer section h2.active{
             border-top: 2px solid #fff;
@@ -108,6 +131,7 @@
             width: 35vw;
             height: 100vh;
             background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
             position: fixed;
             top: 0;
@@ -137,7 +161,6 @@
             transition: .5s;
             cursor: pointer;
             color: white;
-            background-color: green;
         }
         .bag-products article h4{
             padding-top: 20px;
@@ -145,6 +168,8 @@
             text-align: center;
         }
         /** menu Drawer Products fim */
+
+        /* INICIO HEADER PRINCIPAL */
         button{
             padding: 5px;
             cursor: pointer;
@@ -153,7 +178,8 @@
         }
         button:hover{
             border-radius: 50%;
-            background-color: aquamarine;
+            color: #fff;
+            background-color: blueviolet;
         }
         header{
             gap: 10px;
@@ -163,14 +189,18 @@
             padding: 5px;
             background-color: bisque;
         }
+        /* FIM HEADER PRINCIPAL */
         .nav-list{
             gap: 10px;
             display: flex;
         }
        
         @media (max-width: 990px){
-                 
+            .btn-mobile-left{
+                display: none;
+            }     
         }
+
         @media (max-width: 700px){
             .btn-mobile-left{
                 display: block !important;
