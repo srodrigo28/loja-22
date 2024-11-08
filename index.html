@@ -20,6 +20,9 @@
             <div class="nav-list-header">
                 <h2 class="product-mark">Feminino</h2>
                 <h2>Masculino</h2>
+                <button id="btn-close-left">
+                    <i class="bi bi-x-lg"></i>
+                </button>
             </div>
             <ul class="">
                 <li> <a href="#"> Acessórios   </a> <button> <i class="bi bi-arrow-right"></i> </button> </li>
@@ -36,11 +39,22 @@
                 </section>
             </div>
         </nav-header>
-        
+        <!-- FIM MOBILE MENU -->
+
         <button id="mobile-sac">
             <i class="bi bi-bag"></i>
         </button>
     </header>
+
+    <!-- INICIO MAIN -->
+    <main>
+        <section class="product">
+            <div class="product-item">
+                <img src="./image/50-cents.png" alt="" id="splash">
+            </div>
+        </section>
+    </main>
+    <!-- FIM MAIN -->
 
     <!-- INICIO area sacola  -->
     <section class="bag-products esconder">
@@ -60,7 +74,11 @@
     <script src="./script.js"></script>
 
     <style>
-        
+        body{
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
         /** menu Drawer Products */
         .btn-mobile-left{
             display: flex;
@@ -73,8 +91,8 @@
             position: absolute;
             top: 0px;
             left: 0px;
-            width: 36vw;
-            height: 100vh;
+            width: 60vw;
+            height: 80vh;
             background-color: #fff;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             
@@ -105,9 +123,10 @@
             background-color: bisque;
         }
         .nav-footer{
+            height: 20vh;
             color: #fff;
             font-size: 12px;
-            width: 35vw;
+            width: 60vw;
             background-color: #1f1f1f;
 
             position: fixed;
@@ -115,8 +134,7 @@
         }
         .nav-footer section{
             padding-left: 20px;
-        }
-        
+        } 
         .nav-footer section h2{
             padding: 10px 0;
             cursor: pointer;
@@ -125,10 +143,9 @@
             border-top: 2px solid #fff;
             border-bottom: 2px solid #fff;
         }
-
         /* INICIO MENU SACOLA  */
         .bag-products{
-            width: 35vw;
+            width: 60vw;
             height: 100vh;
             background-color: #fff;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -144,6 +161,7 @@
             padding: 10px 10px;
             display: flex;
             align-items: center;
+            padding: 10px 20px;
             justify-content: space-between;
         }
         .bag-products h2{
@@ -164,6 +182,7 @@
         }
         .bag-products article h4{
             padding-top: 20px;
+            padding-right: 20px;
             font-size: 14px;
             text-align: center;
         }
@@ -176,10 +195,9 @@
             transition: .3s;
             background-color: transparent;
         }
-        button:hover{
+        .bag-products button:hover{
             border-radius: 50%;
-            color: #fff;
-            background-color: blueviolet;
+            color: #000;
         }
         header{
             gap: 10px;
@@ -207,9 +225,27 @@
             }
         }
 
+        /* MAIN */
+        main{
+            display: flex;
+            justify-content: center;
+        }
+        main .product{
+            height: 50vh;
+            width: 100vw;
+            background-color: #fff;
+            margin-right: 20px;
+        }
+
         /* HELPS FUNCTIONS */
         .esconder{ display: none; }
         .esconder-left {  display: none; }
+
+        main{
+            height: 100vh;
+            width: 100vw;
+            background-color: #1f1f1f;
+        }
     </style>
 </body>
 </html>
