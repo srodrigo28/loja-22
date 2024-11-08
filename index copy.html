@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Loja</title>
+</head>
+<body>
+    <header>
+        <button class="btn-mobile-left esconder-left">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <img width="100" src="./logo.png" alt="">
+
+        <!-- INICIO MOBILE MENU -->
+        <nav-header class="nav-list-mobile esconder-left">
+            <div class="nav-list-header">
+                <h2 class="product-mark">Feminino</h2>
+                <h2>Masculino</h2>
+                <button id="btn-close-left">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <ul class="">
+                <li> <a href="#"> Acessórios   </a> <button> <i class="bi bi-arrow-right"></i> </button> </li>
+                <li> <a href="#"> Roupas    </a>    <button> <i class="bi bi-arrow-right"></i> </button> </li>
+                <li> <a href="#"> Calças </a>       <button> <i class="bi bi-arrow-right"></i> </button> </li>
+                <li> <a href="#"> Sapatos </a>      <button> <i class="bi bi-arrow-right"></i> </button> </li>
+                <li> <a href="#"> Marcas </a>       <button> <i class="bi bi-arrow-right"></i> </button> </li>
+            </ul>
+            <div class="nav-footer">
+                <section>
+                    <h2>LOGIN</h2>
+                    <h2 class="active">LISTA DESEJOS</h2>
+                    <h2>NOSSO SUPORTE</h2>
+                </section>
+            </div>
+        </nav-header>
+        <!-- FIM MOBILE MENU -->
+
+        <button id="mobile-sac">
+            <i class="bi bi-bag"></i>
+        </button>
+    </header>
+
+    <!-- INICIO MAIN -->
+    <main>
+        <section class="product">
+            <div class="product-item">
+                <img src="./image/50-cents.png" alt="" id="splash">
+            </div>
+            <div class="product-slider">
+                <div class="slide first">
+                    <img src="" alt="">
+                </div>
+                <div class="slide">
+                    <img src="" alt="">
+                </div>
+                <div class="slide">
+                    <img src="" alt="">
+                </div>
+                <div class="slide">
+                    <img src="" alt="">
+                </div>
+
+                <div class="slider">
+                    <div class="slides">
+                         <!-- INICIO RADIOS BUTTONS -->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        
+                        <!-- INICIO NAVIGATION SLIDE AUTO -->
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+
+                        <!-- INICIO NAVIGATION SLIDE MANUAL -->
+                        <div class="navigation-auto">
+                            <label for="radio1" class="manual-btn1"> </label>
+                            <label for="radio2" class="manual-btn2"> </label>
+                            <label for="radio3" class="manual-btn3"> </label>
+                            <label for="radio4" class="manual-btn4"> </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FIM MAIN -->
+
+    <!-- INICIO area sacola  -->
+    <section class="bag-products esconder">
+        <header>
+            <h2>COMPRAS</h2>
+            <button>
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </header>
+
+        <article>
+            <h4>Você ainda não selecionou nenhum produto</h4>
+        </article>
+    </section>
+    <!-- FIM area sacola  -->
+
+    <script src="./script.js"></script>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        /** menu Drawer Products */
+        .btn-mobile-left{
+            display: flex;
+            height: 100px;
+            width: 100px;
+        }
+        .btn-mobile-left i{
+            color: red;
+            background-color: #000;
+            width: 100px;
+            height: 100px;
+            font-weight: 600;
+            font-size: 1.3em;
+        }
+        .product-mark{
+            padding: 10px;
+            background-color: bisque;
+        }
+        .nav-list-mobile{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 60vw;
+            height: 80vh;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-list-header{
+            gap: 10px;
+            display: flex;
+            padding: 5px 10px;
+        }
+        .nav-list-header h2{
+            padding: 10px;
+            letter-spacing: 1.2px;
+            font-size: 14px;
+        }
+        .nav-list-mobile li a{
+            margin-left: 20px;
+            color: #000;
+        }
+        .nav-list-mobile li{
+            padding: 10px 0;
+            display: flex;
+            padding-right: 20px;
+            justify-content: space-between;
+        }
+        .nav-list-mobile li:hover{
+            background-color: bisque;
+        }
+        .nav-footer{
+            height: 20vh;
+            color: #fff;
+            font-size: 12px;
+            width: 60vw;
+            background-color: #1f1f1f;
+
+            position: fixed;
+            bottom: 0;
+        }
+        .nav-footer section{
+            padding-left: 20px;
+        } 
+        .nav-footer section h2{
+            padding: 10px 0;
+            cursor: pointer;
+        }
+        .nav-footer section h2.active{
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+        }
+        /* INICIO MENU SACOLA  */
+        .bag-products{
+            width: 60vw;
+            height: 100vh;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            position: fixed;
+            top: 0;
+            right: 0px;
+        }
+        .bag-products header{
+            color: #fff;
+            background-color: blueviolet;
+
+            padding: 10px 10px;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            justify-content: space-between;
+        }
+        .bag-products h2{
+            font-size: 16px;
+            text-align: center;
+        }
+        .bag-products button{
+            width: 40px;
+            height: 30px;
+            color: #fff;
+            transition: .3s;
+            font-size: 13px;
+        }
+        .bag-products button i{
+            font-size: 1.3em;
+        }
+        .bag-products button:hover{
+            transition: .5s;
+            cursor: pointer;
+            color: white;
+        }
+        .bag-products article h4{
+            padding-top: 20px;
+            padding-right: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+        /** menu Drawer Products fim */
+
+        /* INICIO HEADER PRINCIPAL */
+        button{
+            padding: 5px;
+            cursor: pointer;
+            transition: .3s;
+            background-color: transparent;
+        }
+        .bag-products button:hover{
+            border-radius: 50%;
+            color: #000;
+        }
+        header{
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            background-color: bisque;
+        }
+        /* FIM HEADER PRINCIPAL */
+        .nav-list{
+            gap: 10px;
+            display: flex;
+        }
+       
+        @media (max-width: 990px){
+            .btn-mobile-left{
+                display: none;
+            }     
+        }
+
+        @media (max-width: 700px){
+            .btn-mobile-left{
+                display: block !important;
+            }
+        }
+
+        /* MAIN */
+        main{
+            display: flex;
+            justify-content: center;
+        }
+        main .product{
+            height: 50vh;
+            width: 100vw;
+            background-color: #fff;
+            margin-right: 20px;
+        }
+
+        /* HELPS FUNCTIONS */
+        .esconder{ display: none; }
+        .esconder-left {  display: none; }
+
+        main{
+            height: 100vh;
+            width: 100vw;
+            background-color: #1f1f1f;
+        }
+    </style>
+</body>
+</html>

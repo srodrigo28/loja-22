@@ -1,0 +1,9 @@
+.feminino{
+    letter-spacing: 1;
+}
+.feminino img{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+}

@@ -1,0 +1,252 @@
+*{
+    border: none;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+/** menu Drawer LEFT MENU */
+.btn-mobile-left{
+    display: flex;
+    height: 3.5em;
+    width: 3.5em;
+}
+.btn-mobile-left i{
+    font-size: 3em;
+    font-weight: 600;
+}
+#btn-close-left{
+    font-size: 1.3em;
+    color: #fff;
+}
+.product-mark{
+    padding: 10px;
+    background-color: bisque;
+}
+.nav-list-mobile{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60vw;
+    height: 90vh;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    display: flex;
+    flex-direction: column;
+}
+.nav-list-header{
+    gap: 10px;
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+.nav-list-header h2{
+    padding: 10px;
+    letter-spacing: 1.2px;
+    font-size: 14px;
+}
+.nav-list-mobile li{
+    margin: 10px;
+    display: flex;
+    padding-right: 20px;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    transition: .9s;
+}
+.nav-list-mobile li:hover{
+    background-color: bisque;
+    border-top-left-radius: 20px;
+}
+.nav-list-mobile li a{
+    padding: 15px;
+    font-weight: 500;
+    color: #000;
+}
+.nav-list-footer{
+    height: 10vh;
+    color: #fff;
+    font-size: 12px;
+    width: 60vw;
+    background-color: #1f1f1f;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+}
+.nav-list-footer section{
+    padding-left: 20px;
+    color: #fff;
+    background-color: #000;
+} 
+.nav-list-footer section h2{
+    padding: 10px 0;
+    cursor: pointer;
+}
+.nav-list-footer section h2.active{
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+/* INICIO MENU SACOLA  */
+.bag-products{
+    width: 60vw;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    top: 0;
+    right: 0px;
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+}
+.bag-products header{
+    color: #fff;
+    background-color: blueviolet;
+
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+.bag-products h2{
+    font-size: 16px;
+    text-align: center;
+}
+.bag-products button{
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+#mobile-sac{
+    width: 40px;
+    height: 40px;
+    transition: .3s;
+}
+#btnCloseSacola{
+    background-color: red;
+}
+#mobile-sac i{
+    font-size: 2.5em;
+}
+.bag-products button:hover{
+    transition: .5s;
+    cursor: pointer;
+    color: white;
+}
+.bag-products article h4{
+    padding-top: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+.bag-products footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f1f1f;
+}
+.bag-products footer p{
+    margin-right: 150px;
+}
+/** menu Drawer Products fim */
+
+/* INICIO HEADER PRINCIPAL */
+button{
+    padding: 5px;
+    cursor: pointer;
+    transition: .3s;
+    background-color: transparent;
+}
+.bag-products button:hover{
+    border-radius: 50%;
+    color: #000;
+}
+header{
+    gap: 10px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+}
+/* FIM HEADER PRINCIPAL */
+.nav-list{
+    gap: 10px;
+    display: flex;
+}
+
+#btn-zapp{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+#btn-zapp i{
+    color: green;
+    font-size: 3.5em;
+}
+
+@media (max-width: 1920px){
+    .nav-list-mobile{
+     width: 15vw;
+     background-color: #fff;
+    }     
+    .btn-mobile-left i, .btn-mobile-left{
+        display: none;
+    }
+}
+@media (max-width: 1600px){
+    .nav-list-mobile{
+     width: 25vw;
+    }
+    .btn-mobile-full-left i{
+        display: show;
+    }
+    .btn-mobile-left i, .btn-mobile-left{
+        display: none;
+    }
+}
+/* STARTING  RESPONSIVEL*/
+@media (max-width: 990px){
+    .nav-list-mobile{
+        width: 35vw;
+    }
+    .btn-mobile-left button{
+        display: flex;
+    }
+    .btn-mobile-left i, .btn-mobile-left{
+        display: flex;
+    }
+}
+
+@media (max-width: 700px){
+    .nav-list-mobile{
+        width: 70vw;
+    }
+    .btn-mobile-left button, i{
+        display: flex;
+        color: #000;
+    }
+}
+@media (max-width: 330px){
+    .nav-list-mobile{
+        width: 100vw;
+    }
+    .btn-mobile-left button, i{
+        display: flex;
+        background-color: red;
+    }
+}
+/* HELPS FUNCTIONS */
+.esconder-sacola{ display: none; }
+.esconder-left {  display: none; }

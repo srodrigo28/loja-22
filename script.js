@@ -1,34 +1,31 @@
-var btnMobileLeft = document.querySelector(".btn-mobile-left")
 var menuLeft = document.querySelector(".nav-list-mobile")
 var menuSacola = document.querySelector(".bag-products")
-var btnSacola = document.querySelector("#mobile-sac")
-var btnClose = document.querySelector("#btn-close-left")
+
 var imageSplash = document.querySelector("#splash")
 
-imageSplash.addEventListener("load", (e) => {
-    
-    setTimeout( () => {
-        imageSplash.style.display = "none"
-    }, 3000)
-    
-})
+var btnSacolaShow = document.querySelector("#mobile-sac")
+var btnMobileLeft = document.querySelector(".btn-mobile-left")
+var btnCloseLeftMenu = document.querySelector("#btn-close-left")
+var btnCloseSacola = document.querySelector("#btnCloseSacola")
 
-btnMobileLeft.onclick = () => {
-    menuLeft.classList.toggle("esconder-left")
+
+btnMobileLeft.onclick = (e) => {
+    e.preventDefault()
+    menuLeft.style.display = "block"
+    // alert("teste :: btnLeft")
 }
 
-btnClose.addEventListener("click", () => {
+btnCloseLeftMenu.addEventListener("click", (e) => {
+    e.preventDefault()
     menuLeft.style.display = "none"
-
-   //  alert("teste")
-   location.reload()
 })
 
-btnSacola.onclick = () => {
-    menuSacola.classList.toggle("esconder")
+btnSacolaShow.onclick = (e) => {
+    e.preventDefault()
+    menuSacola.style.display = "block"
 }
 
-menuSacola.onclick = () => {
-    menuSacola.classList.toggle("esconder")
+btnCloseSacola.onclick = (e) => {
+    e.preventDefault()
+    menuSacola.style.display = "none"
 }
-//  menuSacola.classList.toggle("esconder")

@@ -1,0 +1,32 @@
+#slide{
+    height: 38vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide-item {
+    height: 38vh;
+    width: 100%;
+    background-color: yellow;
+}
+.slide-item img{
+    width: 100%;
+}
+.product{
+    height: 50vh;
+    width: 100vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product .product-item{
+    flex: 1;
+    background-color: bisque;
+}
+.product .product-item img{
+    width: 48vw;
+    height: 25vh;
+}

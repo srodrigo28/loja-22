@@ -2,18 +2,20 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/geral.css">
+    <link rel="stylesheet" href="./styles/section-feminino.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Loja</title>
 </head>
 <body>
     <header>
-        <button class="btn-mobile-left esconder-left">
+        <button class="btn-mobile-left">
             <i class="bi bi-list"></i>
         </button>
 
-        <img width="100" src="./logo.png" alt="">
+        <img width="200" src="./logo.png" alt="">
 
         <!-- INICIO MOBILE MENU -->
         <nav-header class="nav-list-mobile esconder-left">
@@ -24,14 +26,13 @@
                     <i class="bi bi-x-lg"></i>
                 </button>
             </div>
-            <ul class="">
+            <ul class="nav-item">
                 <li> <a href="#"> Acessórios   </a> <button> <i class="bi bi-arrow-right"></i> </button> </li>
-                <li> <a href="#"> Roupas    </a>    <button> <i class="bi bi-arrow-right"></i> </button> </li>
-                <li> <a href="#"> Calças </a>       <button> <i class="bi bi-arrow-right"></i> </button> </li>
-                <li> <a href="#"> Sapatos </a>      <button> <i class="bi bi-arrow-right"></i> </button> </li>
                 <li> <a href="#"> Marcas </a>       <button> <i class="bi bi-arrow-right"></i> </button> </li>
+                <li> <a href="#"> Roupas    </a>    <button> <i class="bi bi-arrow-right"></i> </button> </li>
+                <li> <a href="#"> Sapatos </a>      <button> <i class="bi bi-arrow-right"></i> </button> </li>
             </ul>
-            <div class="nav-footer">
+            <div class="nav-list-footer">
                 <section>
                     <h2>LOGIN</h2>
                     <h2 class="active">LISTA DESEJOS</h2>
@@ -46,21 +47,11 @@
         </button>
     </header>
 
-    <!-- INICIO MAIN -->
-    <main>
-        <section class="product">
-            <div class="product-item">
-                <img src="./image/50-cents.png" alt="" id="splash">
-            </div>
-        </section>
-    </main>
-    <!-- FIM MAIN -->
-
     <!-- INICIO area sacola  -->
-    <section class="bag-products esconder">
+    <section class="bag-products esconder-sacola">
         <header>
             <h2>COMPRAS</h2>
-            <button>
+            <button id="btnCloseSacola">
                 <i class="bi bi-x-lg"></i>
             </button>
         </header>
@@ -68,184 +59,75 @@
         <article>
             <h4>Você ainda não selecionou nenhum produto</h4>
         </article>
+        <footer>
+            <p>Muito obrigado!</p>
+        </footer>
     </section>
     <!-- FIM area sacola  -->
+
+    <!-- INICIO FEMININO -->
+     <section class="feminino">
+        <header>
+            <img width="100" src="./image/produtos/sobretudo-femi.jpeg" alt="">
+            <img width="100" src="./image/produtos/jaqueta-femi.jpeg" alt="">
+            <img width="100" src="./image/produtos/roupa-frio-femin.jpeg" alt="">
+            <img width="100" src="./image/produtos/sobretudo-femi.jpeg" alt="">
+        </header>
+     </section>
+    <!-- FIM    FEMININO -->
+
+    <!-- VITRINE SLIDE -->
+     <section id="slide">
+        <div class="slide-item">
+            <img src="./image/50-cents.png" alt="">
+        </div>
+     </section>
+
+     <!-- PRODUTOS 1 -->
+     <section class="product">
+        <div class="product-item">
+            <img src="./image/produtos/camisa-masc.jpeg" alt="">
+        </div>
+        <div class="product-item">
+            <img src="./image/produtos/jaqueta-femi.jpeg" alt="">
+        </div>
+        <div class="product-item">
+            <img src="./image/produtos/jaqueta-masc2.jpeg" alt="">
+        </div>
+        <div class="product-item">
+            <img src="./image/produtos/sobretudo-femin2.jpeg" alt="">
+        </div>
+     </section>
+
+     <!-- PRODUTOS 2 -->
+     <section class="product">
+        <div class="product-item">
+            <img src="./image/produtos/camisa-masc.jpeg" alt="">
+        </div>
+        <div class="product-item">
+            <img src="./image/produtos/jaqueta-femi.jpeg" alt="">
+        </div>
+        <div class="product-item">
+            <img src="./image/produtos/jaqueta-masc2.jpeg" alt="">
+        </div>
+        <div class="product-item">
+            <img src="./image/produtos/sobretudo-femin2.jpeg" alt="">
+        </div>
+     </section>
+
+    <!-- WHATS-APP-->
+     <button id="btn-zapp">
+        <a href="https://api.whatsapp.com/send?phone=+55(62)8592-1140&text=Quero%20comprar%20um%20produto%20hoje!"
+            class="btn-whatsapp"
+            target="_blank">
+            <i class="bi bi-whatsapp"></i>
+        </a>        
+     </button>
 
     <script src="./script.js"></script>
 
     <style>
-        body{
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        /** menu Drawer Products */
-        .btn-mobile-left{
-            display: flex;
-        }
-        .product-mark{
-            padding: 10px;
-            background-color: bisque;
-        }
-        .nav-list-mobile{
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 60vw;
-            height: 80vh;
-            background-color: #fff;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            
-            display: flex;
-            flex-direction: column;
-        }
-        .nav-list-header{
-            gap: 10px;
-            display: flex;
-            padding: 5px 10px;
-        }
-        .nav-list-header h2{
-            padding: 10px;
-            letter-spacing: 1.2px;
-            font-size: 14px;
-        }
-        .nav-list-mobile li a{
-            margin-left: 20px;
-            color: #000;
-        }
-        .nav-list-mobile li{
-            padding: 10px 0;
-            display: flex;
-            padding-right: 20px;
-            justify-content: space-between;
-        }
-        .nav-list-mobile li:hover{
-            background-color: bisque;
-        }
-        .nav-footer{
-            height: 20vh;
-            color: #fff;
-            font-size: 12px;
-            width: 60vw;
-            background-color: #1f1f1f;
-
-            position: fixed;
-            bottom: 0;
-        }
-        .nav-footer section{
-            padding-left: 20px;
-        } 
-        .nav-footer section h2{
-            padding: 10px 0;
-            cursor: pointer;
-        }
-        .nav-footer section h2.active{
-            border-top: 2px solid #fff;
-            border-bottom: 2px solid #fff;
-        }
-        /* INICIO MENU SACOLA  */
-        .bag-products{
-            width: 60vw;
-            height: 100vh;
-            background-color: #fff;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-            position: fixed;
-            top: 0;
-            right: 0px;
-        }
-        .bag-products header{
-            color: #fff;
-            background-color: blueviolet;
-
-            padding: 10px 10px;
-            display: flex;
-            align-items: center;
-            padding: 10px 20px;
-            justify-content: space-between;
-        }
-        .bag-products h2{
-            font-size: 16px;
-            text-align: center;
-        }
-        .bag-products button{
-            color: #fff;
-            transition: .3s;
-            height: 30px;
-            width: 40px;
-            font-size: 13px;
-        }
-        .bag-products button:hover{
-            transition: .5s;
-            cursor: pointer;
-            color: white;
-        }
-        .bag-products article h4{
-            padding-top: 20px;
-            padding-right: 20px;
-            font-size: 14px;
-            text-align: center;
-        }
-        /** menu Drawer Products fim */
-
-        /* INICIO HEADER PRINCIPAL */
-        button{
-            padding: 5px;
-            cursor: pointer;
-            transition: .3s;
-            background-color: transparent;
-        }
-        .bag-products button:hover{
-            border-radius: 50%;
-            color: #000;
-        }
-        header{
-            gap: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 5px;
-            background-color: bisque;
-        }
-        /* FIM HEADER PRINCIPAL */
-        .nav-list{
-            gap: 10px;
-            display: flex;
-        }
        
-        @media (max-width: 990px){
-            .btn-mobile-left{
-                display: none;
-            }     
-        }
-
-        @media (max-width: 700px){
-            .btn-mobile-left{
-                display: block !important;
-            }
-        }
-
-        /* MAIN */
-        main{
-            display: flex;
-            justify-content: center;
-        }
-        main .product{
-            height: 50vh;
-            width: 100vw;
-            background-color: #fff;
-            margin-right: 20px;
-        }
-
-        /* HELPS FUNCTIONS */
-        .esconder{ display: none; }
-        .esconder-left {  display: none; }
-
-        main{
-            height: 100vh;
-            width: 100vw;
-            background-color: #1f1f1f;
-        }
     </style>
 </body>
 </html>
