@@ -9,11 +9,14 @@
 </head>
 <body>
     <header>
-        <button>
+        <button class="btn-mobile-left esconder-left">
             <i class="bi bi-list"></i>
         </button>
+
         <img width="100" src="./logo.png" alt="">
-        <nav-header class="nav-list-mobile">
+
+        <!-- INICIO MOBILE MENU -->
+        <nav-header class="nav-list-mobile esconder-left">
             <div class="nav-list-header">
                 <h2>Feminino</h2>
                 <h2>Masculino</h2>
@@ -32,14 +35,16 @@
                 </section>
             </div>
         </nav-header>
-        <button>
+        
+        <button id="mobile-sac">
             <i class="bi bi-bag"></i>
         </button>
     </header>
 
-    <section class="bag-products">
+    <!-- INICIO area sacola  -->
+    <section class="bag-products esconder">
         <header>
-            <h2>SACOLA DE COMPRAS</h2>
+            <h2>COMPRAS</h2>
             <button>
                 <i class="bi bi-x-lg"></i>
             </button>
@@ -49,12 +54,58 @@
             <h4>Você ainda não selecionou nenhum produto</h4>
         </article>
     </section>
+    <!-- FIM area sacola  -->
+
+    <script src="./script.js"></script>
 
     <style>
         
         /** menu Drawer Products */
+        .btn-mobile-left{
+                display: flex;
+        }
+        .nav-list-mobile{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 36vw;
+            height: 100vh;
+            background-color: #fff;
+            
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-list-header{
+            gap: 10px;
+            display: flex;
+            padding: 5px 10px;
+        }
+        .nav-list-header h2{
+            font-size: 16px;
+        }
+        .nav-list-mobile li{
+            margin-left: 20px;
+            padding: 10px 0;
+        }
+        .nav-footer{
+            color: #fff;
+            font-size: 12px;
+            background-color: #1f1f1f;
+        }
+        .nav-footer section{
+            padding-left: 20px;
+        }
+        .nav-footer section h2{
+            padding: 10px 0;
+        }
+        .nav-footer section h2.active{
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+        }
+
+        /* INICIO MENU SACOLA  */
         .bag-products{
-            width: 40vw;
+            width: 35vw;
             height: 100vh;
             background-color: #fff;
 
@@ -76,13 +127,17 @@
             text-align: center;
         }
         .bag-products button{
+            color: #fff;
             transition: .3s;
             height: 30px;
+            width: 40px;
+            font-size: 13px;
         }
         .bag-products button:hover{
-            transition: .3s;
-            width: 30px;
+            transition: .5s;
             cursor: pointer;
+            color: white;
+            background-color: green;
         }
         .bag-products article h4{
             padding-top: 20px;
@@ -90,7 +145,6 @@
             text-align: center;
         }
         /** menu Drawer Products fim */
-        
         button{
             padding: 5px;
             cursor: pointer;
@@ -115,42 +169,17 @@
         }
        
         @media (max-width: 990px){
-            .nav-list-mobile{
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                width: 36vw;
-                height: 100vh;
-                background-color: #fff;
-                
-                display: flex;
-                flex-direction: column;
-            }
-            .nav-list-header{
-                gap: 10px;
-                display: flex;
-                padding: 5px 10px;
-            }
-            .nav-list-header h2{
-                font-size: 16px;
-            }
-            .nav-list-mobile li{
-                margin-left: 20px;
-            }
-            .nav-footer{
-                color: #fff;
-                font-size: 12px;
-                background-color: #1f1f1f;
-            }
-            .nav-footer section{
-                padding-left: 20px;
-            }
-            .nav-footer section h2.active{
-                border-top: 2px solid #fff;
-                border-bottom: 2px solid #fff;
-            }
-
+                 
         }
+        @media (max-width: 700px){
+            .btn-mobile-left{
+                display: block !important;
+            }
+        }
+
+        /* HELPS FUNCTIONS */
+        .esconder{ display: none; }
+        .esconder-left {  display: none; }
     </style>
 </body>
 </html>
