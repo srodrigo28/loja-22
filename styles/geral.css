@@ -128,7 +128,7 @@ body{
     transition: .3s;
 }
 #btnCloseSacola{
-    background-color: red;
+    color: #fff;
 }
 #mobile-sac i{
     font-size: 2.5em;
@@ -244,7 +244,6 @@ header{
     }
     .btn-mobile-left button, i{
         display: flex;
-        background-color: red;
     }
 }
 /* HELPS FUNCTIONS */
