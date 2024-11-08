@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Loja</title>
+</head>
+<body>
+    <header>
+        <button>
+            <i class="bi bi-list"></i>
+        </button>
+        <img width="100" src="./logo.png" alt="">
+        <nav-header class="nav-list-mobile">
+            <div class="nav-list-header">
+                <h2>Feminino</h2>
+                <h2>Masculino</h2>
+            </div>
+            <ul class="">
+                <li> <a href="#"> Início   </a> </li>
+                <li> <a href="#"> Sobre    </a> </li>
+                <li> <a href="#"> Projetos </a> </li>
+                <li> <a href="#"> Contatos </a> </li>
+            </ul>
+            <div class="nav-footer">
+                <section>
+                    <h2>LOGIN</h2>
+                    <h2 class="active">LISTA DESEJOS</h2>
+                    <h2>NOSSO SUPORTE</h2>
+                </section>
+            </div>
+        </nav-header>
+        <button>
+            <i class="bi bi-bag"></i>
+        </button>
+    </header>
+
+    <section class="bag-products">
+        <header>
+            <h2>SACOLA DE COMPRAS</h2>
+            <button>
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </header>
+
+        <article>
+            <h4>Você ainda não selecionou nenhum produto</h4>
+        </article>
+    </section>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            list-style: none;
+            text-decoration: none;
+            border: none;
+
+            font-family: "Roboto", serif;
+        }
+        /** menu Drawer Products */
+        .bag-products{
+            width: 40vw;
+            height: 100vh;
+            background-color: #fff;
+
+            position: fixed;
+            top: 0;
+            right: 0px;
+        }
+        .bag-products header{
+            color: #fff;
+            background-color: blueviolet;
+
+            padding: 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .bag-products h2{
+            font-size: 16px;
+            text-align: center;
+        }
+        .bag-products button{
+            transition: .3s;
+            height: 30px;
+        }
+        .bag-products button:hover{
+            transition: .3s;
+            width: 30px;
+            cursor: pointer;
+        }
+        .bag-products article h4{
+            padding-top: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+        /** menu Drawer Products fim */
+        
+        button{
+            padding: 5px;
+            cursor: pointer;
+            transition: .3s;
+            background-color: transparent;
+        }
+        button:hover{
+            border-radius: 50%;
+            background-color: aquamarine;
+        }
+        header{
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            background-color: bisque;
+        }
+        .nav-list{
+            gap: 10px;
+            display: flex;
+        }
+       
+        @media (max-width: 990px){
+            .nav-list-mobile{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 36vw;
+                height: 100vh;
+                background-color: #fff;
+                
+                display: flex;
+                flex-direction: column;
+            }
+            .nav-list-header{
+                gap: 10px;
+                display: flex;
+                padding: 5px 10px;
+            }
+            .nav-list-header h2{
+                font-size: 16px;
+            }
+            .nav-list-mobile li{
+                margin-left: 20px;
+            }
+            .nav-footer{
+                color: #fff;
+                font-size: 14px;
+                background-color: #1f1f1f;
+            }
+            .nav-footer section{
+                padding-left: 20px;
+            }
+            .nav-footer section h2.active{
+                border-top: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+            }
+
+        }
+    </style>
+</body>
+</html>
