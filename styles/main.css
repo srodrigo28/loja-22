@@ -30,3 +30,20 @@
     width: 48vw;
     height: 25vh;
 }
+
+@media (min-width: 800px){
+    #slide{
+        width: 100%;
+        height: 700px;
+    }
+    #slide .slide-item{
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../image/50-cents.png");
+    }
+    #slide .slide-item img{
+        display: none;
+    }
+}
